@@ -1,3 +1,21 @@
+<?php
+include_once('connection.php');
+
+$tbl_name = "relay_control";
+$sql = "SELECT * FROM $tbl_name";
+$result = mysqli_query($conn, $sql);
+
+$devices=[];
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        $devices =  $row;
+    }
+} 
+mysqli_close($conn);
+
+?>
+
 
 <html lang="en">
 <head>
@@ -8,61 +26,61 @@
 </head>
 <body>
 <h1><b><i><strong>اتوماسیون هوشمند راشین</strong></i></b><br></h1>
-    
-      
+
+
 <form action="server.php" method="get"> 
-  <span>دستگاه شماره یک</span>
+  <span>دستگاه شماره 1</span>
   <label class="switch switch-green">
-    <input type="checkbox" name="switch_1"class="switch-input" value="1">
+    <input type="checkbox" name="switch_1" class="switch-input" value="1" <?=$devices["switch_1"] ? 'checked' :'' ?>>
     <span class="switch-label" data-on="On" data-off="Off"></span>
     <span class="switch-handle"></span>
   </label>
       <br>
-      <span>دستگاه شماره دو</span>
+      <span>دستگاه شماره 2</span>
       <label class="switch switch-green">
-        <input type="checkbox" name="switch_2" class="switch-input" value="1">
+        <input type="checkbox" name="switch_2" class="switch-input" value="1" <?=$devices["switch_2"] ? 'checked' :'' ?>>
         <span class="switch-label" data-on="On" data-off="Off"></span>
         <span class="switch-handle"></span>
       </label>
       <br>
-      <span>دستگاه شماره سه</span>
+      <span>دستگاه شماره 3</span>
       <label class="switch switch-green">
-        <input type="checkbox" name="switch_3" class="switch-input" value="1">
+        <input type="checkbox" name="switch_3" class="switch-input" value="1"<?=$devices["switch_3"] ? 'checked' :'' ?>>
         <span class="switch-label" data-on="On" data-off="Off"></span>
         <span class="switch-handle"></span>
       </label>
       <br>
-      <span>دستگاه شماره چهار</span>
+      <span>دستگاه شماره 4</span>
       <label class="switch switch-green">
-        <input type="checkbox" name="switch_4" class="switch-input" value="1">
+        <input type="checkbox" name="switch_4" class="switch-input" value="1"<?=$devices["switch_4"] ? 'checked' :'' ?>>
         <span class="switch-label" data-on="On" data-off="Off"></span>
         <span class="switch-handle"></span>
       </label>
       <br>
-      <span>دستگاه شماره پنج</span>
+      <span>دستگاه شماره 5</span>
       <label class="switch switch-green">
-        <input type="checkbox" name="switch_5" class="switch-input" value="1">
+        <input type="checkbox" name="switch_5" class="switch-input" value="1"<?=$devices["switch_5"] ? 'checked' :'' ?>>
         <span class="switch-label" data-on="On" data-off="Off"></span>
         <span class="switch-handle"></span>
       </label>
       <br>
-      <span>دستگاه شماره شش</span>
+      <span>دستگاه شماره 6</span>
       <label class="switch switch-green">
-        <input type="checkbox" name="switch_6" class="switch-input" value="1">
+        <input type="checkbox" name="switch_6" class="switch-input" value="1"<?=$devices["switch_6"] ? 'checked' :'' ?>>
         <span class="switch-label" data-on="On" data-off="Off"></span>
         <span class="switch-handle"></span>
       </label>
       <br>
-      <span>دستگاه شماره هفت</span>
+      <span>دستگاه شماره 7</span>
       <label class="switch switch-green">
-        <input type="checkbox" name="switch_7" class="switch-input" value="1">
+        <input type="checkbox" name="switch_7" class="switch-input" value="1"<?=$devices["switch_7"] ? 'checked' :'' ?>>
         <span class="switch-label" data-on="On" data-off="Off"></span>
         <span class="switch-handle"></span>
       </label>
       <br>
-      <span>دستگاه شماره هشت</span>
+      <span>دستگاه شماره 8</span>
       <label class="switch switch-green">
-        <input type="checkbox" name="switch_8" class="switch-input" value="1">
+        <input type="checkbox" name="switch_8" class="switch-input" value="1"<?=$devices["switch_8"] ? 'checked' :'' ?>>
         <span class="switch-label" data-on="On" data-off="Off"></span>
         <span class="switch-handle"></span>
       </label>
