@@ -1,6 +1,9 @@
 body{
-    margin-top: 50px;
+    margin-top: 3%;
     direction: rtl;
+    background-image: url("2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 html { 
     font-family: Helvetica;
@@ -11,9 +14,21 @@ html {
 span
     {
         font-size: 1.5em;
+        color: #f0f0f0;
         
         
     }
+.seprator
+    {
+        background-color: rgb(0,0,0,0.6);
+        width:90%;
+        height: 90%;
+        margin-right: 5px;
+        padding: 20px 50px 50px 50px;
+        border: 2px solid #cbcbcb;
+        border-radius: 10%;
+    }
+ 
 .button
     {
         display: inline-block;
@@ -30,6 +45,7 @@ span
         text-align: center;
        
     }
+    
 .button_on
 {
     background-color: #1abc9c;
@@ -66,6 +82,24 @@ span
         margin: 1%;
         text-align: center;
         background-color: #1abc9c;
+}
+
+.logout
+{
+  background: none;
+  border: 1px solid #eaeaea;
+  border-radius: 20%;
+  padding: 2%;
+  margin-top: 0.1%;
+  color: #eaeaea;;
+  font-size: 1em;
+  float: left;
+}
+.logout:hover
+{
+  background-color: #af0000;
+  color: #eaeaea;
+  
 }
 .switch {
   position: relative;

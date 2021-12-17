@@ -50,12 +50,12 @@ else
 $sql = "UPDATE $tbl_name SET switch_1=$switch1,switch_2=$switch2,switch_3=$switch3,switch_4=$switch4,switch_5=$switch5,switch_6=$switch6,switch_7=$switch7,switch_8=$switch8 WHERE id=1";
 
 if (mysqli_query($conn, $sql)) {
-    echo "Record updated successfully";
+     header("Location: /panel.php", true,  303); 
   } else {
     echo "Error updating record: " . mysqli_error($conn);
   }
   
   mysqli_close($conn);
-  header("Location: /index.php", true,  303); 
-  exit;
+ 
+  
 ?>
